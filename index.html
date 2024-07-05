@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <script src="scripts.js" defer></script>
+    <title>Gerador de Drop Shadow</title>
+</head>
+
+<body>
+    <div id="drop-shadow-generator">
+        <div id="controls-container">
+            <h2>Configurações do Drop Shadow</h2>
+            <div class="form-control">
+                <div class="range-input">
+                    <label for="horizontal">Deslocamento Horizontal</label>
+                    <input type="range" name="horizontal" id="horizontal" min="-100" max="100" value="5" />
+                </div>
+                <div class="reference-input">
+                    <input type="text" id="horizontal-value" name="horizontal-value" />
+                    <p>px</p>
+                </div>
+            </div>
+            <div class="form-control">
+                <div class="range-input">
+                    <label for="vertical">Deslocamento Vertical</label>
+                    <input type="range" id="vertical" name="vertical" min="-100" max="100" value="5" />
+                </div>
+                <div class="reference-input">
+                    <input type="text" name="vertical-value" id="vertical-value">
+                    <p>px</p>
+                </div>
+            </div>
+            <div class="form-control">
+                <div class="range-input">
+                    <label for="blur">Intensidade do Borrão (Blur)</label>
+                    <input type="range" id="blur" name="blur" min="0" max="100" value="10" />
+                </div>
+                <div class="reference-input">
+                    <input type="text" name="blur-value" id="blur-value">
+                    <p>px</p>
+                </div>
+            </div>
+            <div class="form-control">
+                <div class="range-input">
+                    <label for="Cor da sombra:"></label>
+                    <input type="color" id="color" name="color"
+                    value="#000000">
+                </div>
+                <div class="reference-input">
+                    <input type="text" id="color-value"
+                    name="color-value">
+                </div>
+            </div>
+        </div>
+        <div id="preview">
+            <h2>Preview do Efeito Gerado:</h2>
+            <div id="background">
+                <div id="img">
+                    <img src="img/logo.png" alt="preview" id="preview-img">
+                </div>
+            </div>   
+        </div>
+    </div>
+    <div id="generated-rule">
+        <h2>Copie e cole no seu arquivo CSS</h2>
+        <div id="rules-area">
+            <p id="rule">filter: <span></span>;</p>
+        </div>
+        <p id="copy-instructions">Clique no quadro acima para copiar as regras</p>
+    </div>
+</body>
+
+</html>
